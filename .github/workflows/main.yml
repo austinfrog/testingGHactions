@@ -21,6 +21,6 @@ jobs:
    # if: ${{ github.event_name == 'push' }}
     run: |
      export PATH="$PATH:$HOME/.dotnet/tools"
-     dotnet pack single-example.csproj -0 ./packages
+     dotnet pack single-example.csproj -o ./packages
      cd packages
      dotnet nuget push *.nupkg -s https://shaibz.jfrog.io/artifactory/api/nuget/nuget-virtual/ 
