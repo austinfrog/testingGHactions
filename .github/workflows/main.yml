@@ -23,5 +23,4 @@ jobs:
      export PATH="$PATH:$HOME/.dotnet/tools"
      dotnet pack single-example.csproj -o ./packages
      cd packages
-     nuget sources Add -Name Artifactory -Source https://shaibz.jfrog.io/artifactory/api/nuget/v3/nuget-local/index.json -username {{secrets.USERNAME}} -password {{secrets.PASSWORD}}
-     dotnet nuget push *.nupkg  -s Artifactory
+     dotnet nuget push *.nupkg  -s https://shaibz.jfrog.io/artifactory/api/nuget/v3/nuget-local/ -username {{secrets.USERNAME}} -password {{secrets.PASSWORD}}
