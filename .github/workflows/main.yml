@@ -23,4 +23,4 @@ jobs:
      export PATH="$PATH:$HOME/.dotnet/tools"
      dotnet pack single-example.csproj -o ./packages
      cd packages
-     dotnet nuget push *.nupkg  -s https://shaibz.jfrog.io/artifactory/api/nuget/v3/nuget-local/ -k {{secrets.NUGET_CREDS}}
+     dotnet nuget push *.nupkg  -s https://shaibz.jfrog.io/artifactory/api/nuget/v3/nuget-local/ -k ${{secrets.NUGET_CREDS}}
